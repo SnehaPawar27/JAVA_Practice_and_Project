@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+    <hibernate-configuration>
+
+    <session-factory>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="dialect"> org.hibernate.dialect.MySQLDialect</property>
+        <property name="connection.url">jdbc:mysql://10.1.1.110/training_database_1?characterEncoding=latin1</property>
+        <property name="connection.username">training_user</property>
+        <property name="connection.password">Go4it*11</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+            <property name="hibernate.show_sql">true</property>
+     <mapping class="HiberCRUD.Employee"/>
+    </session-factory>
+
+</hibernate-configuration>
+
+	
+	
+	
