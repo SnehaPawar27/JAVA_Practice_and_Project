@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		alert("Text: "+
+				$("#test").text());
+		});
+	$("#btn2").click(function(){
+		alert("HTMLt: "+
+				$("#test").html());
+	});
+});
+</script>
+</head>
+<body>
+<br><br>
+<p id="test">Example of <b>JQuery</b> with <b>HTML</b>.</p>
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+</body>
+</html>

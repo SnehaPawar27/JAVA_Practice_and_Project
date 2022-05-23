@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+span
+{
+color: red;
+}
+</style>
+<script type="text/javascript" >
+
+function validate()
+{
+	var name=document.getElementById("name").value;
+	var city=document.getElementById("city").value;
+	var num=document.getElementById("num").value;
+	var email=document.getElementById("email").value;
+	var pass=document.getElementById("pass").value;
+	
+	var r1=/[A-Z]/;
+	var r2=/[a-z]/;
+	var r3=/[0-9]/;
+	var r4=/[! @ # $ % ^ &NAME *]/;
+	
+	if(name=="")
+		{
+		document.getElementById("nameerror").innerHTML="* PLEASE ENTER NAME";
+		return false;
+		}
+
+	if(city=="")
+		{
+		document.getElementById("cityerror").innerHTML="* PLEASE ENTER CITY";
+		return false;
+		}
+	
+	if(num=="")
+		{
+		document.getElementById("numerror").innerHTML="* PLEASE ENTER NUMBER";
+		return false;
+		}
+	if(isNaN(num))
+		{
+		document.getElementById("numerror").innerHTML="* PLEASE ENTER ONLY NUMBERS";
+		return false;
+		}
+	if(num.length!=10)
+		{
+		document.getElementById("numerror").innerHTML="* PLEASE ENTER CORRECT NUMBER";
+		return false;
+		}
+	if(email=="")
+	{
+	document.getElementById("emailerror").innerHTML="* PLEASE ENTER EMAIL";
+	return false;
+	}
+	if(pass=="")
+		{
+		document.getElementById("passerror").innerHTML="* PLEASE ENTER PASSWORD";
+		return false;
+		}
+	if(pass.length<8)
+		{
+		document.getElementById("passerror").innerHTML="* PASSWORD LENGTH SHOULD BE GREATER THAN 8 ";
+		return false;
+		}
+	if(!r1.test(pass) || !r2.test(pass) || !r3.test(pass) || !r4.test(pass))
+		{
+		document.getElementById("passerror").innerHTML="* PASSWORD SHOULD CONTAIN ATLEAST ONE CAPITAL,SMALL,NUMBER,CHARACTER";
+		return false;
+		}
+		return true;
+}
+</script>
+</head>
+<body >
+<div align="center">
+
+<br><br>
+<h3 align="center"><ins>Registration Form</ins></h3>
+<form onsubmit="return validate()">
+<table>
+
+<tr><th> ENTER NAME: </th>
+<td><input type="text" id="name"></td>
+<td><span id="nameerror"> </span></td></tr>
+
+<tr><th> ENTER CITY: </th>
+<td><input type="text" id="city"></td>
+<td><span id="cityerror"> </span></td></tr>
+
+<tr><th> ENTER NUMBER: </th>
+<td><input type="text" id="num"></td>
+<td><span id="numerror"> </span></td></tr>
+
+<tr><th> ENTER EMAIL: </th>
+<td><input type="email" id="email"></td>
+<td><span id="emailerror"> </span></td></tr>
+
+<tr><th> ENTER PASSWORD: </th>
+<td><input type="password" id="pass"></td>
+<td><span id="passerror"> </span></td></tr>
+
+<tr>
+<td><input type="submit" value="Register"></td>
+<td><input type="reset" value="Clear"></td></tr>  
+</table>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$("p").hide("slow",function(){
+			alert("The paragraph is now hidden:");
+		});
+	})
+});
+</script>
+
+</head>
+<body><br><br>
+<button>Hide</button>
+<p>This paragraph contain text.</p>
+</body>
+</html>

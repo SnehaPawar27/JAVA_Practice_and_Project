@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#hide").click(function(){
+		//$("p").hide();
+		$("p").hide(1000); //$(selector).hide(speed,callback)
+	});
+	$("#show").click(function(){
+		//$("p").show();
+		$("p").show(1000);
+	});	
+	$("#toggle").click(function(){
+		$("#pd").toggle();
+	});
+	});
+</script>
+</head>
+<body>
+<p>Click hide button to disappear n show button to re-appear</p>
+<p id="pd">Paragraph Toggle</p>
+<button id="hide">hide</button>
+<button id="show">show</button>
+<button id="toggle">Toggle</button>
+</body>
+</html>

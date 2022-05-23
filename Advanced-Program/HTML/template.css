@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+p.multi
+{
+	color:red;
+}
+p.tag
+{
+	text-align:center;
+}

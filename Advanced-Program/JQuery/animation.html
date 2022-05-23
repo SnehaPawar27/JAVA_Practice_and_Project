@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#panel").animate({left:'250px'});
+	});
+	
+});
+</script>
+</head>
+<body>
+<p>animation in jquery</p><br>
+<button>Click</button><br><br><br>
+<div id="panel" style="width:100px;height:100px;background-color:green;position: absolute;"></div>
+
+</body>
+</html>

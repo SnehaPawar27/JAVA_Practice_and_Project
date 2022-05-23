@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$("[href]").css("background-color","pink")
+		$("li:even").css("background-color","yellow");
+	})
+});
+</script>
+</head>
+<body>
+<b>Selectors</b><br>
+<a href="First.html">Click for next page.</a><br>
+<ul>
+<li>java</li>
+<li>HTML</li>
+<li>C++</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+<button>Click</button>
+</body>
+</html>

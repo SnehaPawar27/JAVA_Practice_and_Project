@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON Nested object Demo</title>
+<script type="text/javascript" src="jquery/jquery.min.js">
+var student={
+		"studId": 101,
+		"studName":"Ananya",
+		"address":{
+			"city":"Mumbai",
+			"state":"Maharashtra"
+		}
+}
+$(function(){
+	$("button#nested").click(function(){
+		if(student!=null)
+			{
+			$("table").css("display","block");
+			$("tbody#nested").html("");
+			$("tbody#nested").append("<tr><td>"+student.studId+"</td><td>"+
+										        student.studName+"</td><td>"+
+										        student.address.city+"</td><td>"+
+										        student.address.state+"</td></tr>");
+			}
+	}
+}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Validation</title>
+<script src="jquery.min.js"></script>
+<script src="jquery.validate.min.js"></script>
+<script type="text/javascript">
+$document.ready(function(){
+	$("form").validate({
+		rules:{
+			id:
+				{
+				required:true
+				},
+			name:
+				{
+				required:true
+				},
+			address:
+				{
+				required:true
+				},
+			number:
+				{
+				required:true
+				},
+			email:
+		     	{
+				required:true
+		     	},
+			pass:
+				{
+				required:true
+				}
+				
+			
+		}
+	});
+});
+</script>
+</head>
+<body>
+<br><br>
+
+<fieldset style="width:50px;margin-left:300px;">
+<legend>Registration Form:</legend>
+<form onsubmit="return validate()">
+<table border="1">
+<tr>
+<td><label>Id:</label></td>
+<td><input type="text" name="id"><br>
+<span id="idError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Name:</label></td>
+<td><input type="text" name="name"><br>
+<span id="nameError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Address:</label></td>
+<td><input type="text" name="address"><br>
+<span id="adError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Contact No:</label></td>
+<td><input type="text" name="number"><br>
+<span id="numError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Email id:</label></td>
+<td><input type="email" id="email"><br>
+<span id="eError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Password:</label></td>
+<td><input type="password" name="pass"><br>
+<span id="passError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Submit"></td>
+<td><input type="reset" value="Clear"></td>
+</tr>
+
+</table>
+</form>
+
+</fieldset>
+</body>
+</html>

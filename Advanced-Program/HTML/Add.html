@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function add()
+{
+	var a=parseInt(document.getElementById("num1").value);
+	var b=parseInt(document.getElementById("num2").value);
+	
+	var c=a+b;
+	document.getElementById("add1").value=c;
+	}
+
+</script>
+</head>
+<body><br><br>
+<table align="center">
+<caption>Addition</caption>
+<tr>
+<td><label>First number:</label></td>
+<td><input type="text" id="num1"></td></tr>
+
+<tr>
+<td><label>Second number:</label></td>
+<td><input type="text" id="num2"></td></tr>
+
+<tr>
+<td><label>Result:</label></td>
+<td><input type="text" id="add1"></td></tr>
+
+<tr>
+<td></td>
+<td><button onclick="return add()">Add</button></td>
+
+
+</table>
+</body>
+</html>

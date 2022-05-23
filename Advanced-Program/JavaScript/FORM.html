@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+span
+{
+color: red;
+}</style>
+<script type="text/javascript">
+function validate() 
+{
+var count=0;
+var x=document.getElementsByClassName("valid");
+for(var i=0;i<x.length;i++)
+{
+	if(x[i].value=="")
+	{
+		x[i].nextElementSibling.innerHTML="*  REQUIRED FIELD";
+		count++;
+	}
+}
+	if(count>0)
+		{
+		return false;
+		}
+	else
+		{
+		return true;
+		}
+}
+
+
+function clearup(y)
+{
+	if(y.value!="")
+		y.nextElementSibling.innerHTML="";
+}
+</script>
+</head>
+<body>
+<div align="center">
+
+<br><br>
+<h3 align="center"><ins>Registration Form</ins></h3>
+<form onsubmit="return validate()">
+<table>
+
+<tr><th> ENTER NAME: </th>
+<td><input type="text" class="valid" onblur="clearup(this)"><span></span></td></tr>
+
+<tr><th> ENTER CITY: </th>
+<td><input type="text" class="valid" onblur="clearup(this)"><span></span></td></tr>
+
+<tr><th> ENTER NUMBER: </th>
+<td><input type="text" class="valid" onblur="clearup(this)"><span></span></td></tr>
+
+<tr><th> ENTER EMAIL: </th>
+<td><input type="email" class="valid" onblur="clearup(this)"><span></span></td></tr>
+
+<tr><th> ENTER PASSWORD: </th>
+<td><input type="password" class="valid" onblur="clearup(this)"><span></span></td></tr>
+
+<tr>
+<td><input type="submit" value="Register"></td>
+<td><input type="reset" value="Clear"></td></tr>  
+</table>
+</form>
+</div>
+
+</body>
+</html>

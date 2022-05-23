@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.error
+{
+color:red;
+
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var id=document.getElementById("id").value;
+	var name=document.getElementById("name").value;
+	var address=document.getElementById("address").value;
+	var number=document.getElementById("number").value;
+	var email=document.getElementById("email").value;
+	var pass=document.getElementById("pass").value;
+	
+	var r1=/[A-Z]/;
+	var r2=/[a-z]/;
+	var r3=/[0-9]/;
+	var r4=/[! @ $ % ^ & * ]/;
+	if(id=="")
+		{
+		document.getElementById("idError").innerHTML="Enter id!!";
+		return false;
+		}
+	if(name=="")
+		{
+		document.getElementById("nameError").innerHTML="Enter name!!";
+		return false;
+	}
+	if(address=="")
+		{
+	document.getElementById("adError").innerHTML="Enter address!!";
+	return false;
+	}
+	if(number=="")
+	{
+	document.getElementById("numError").innerHTML="Enter number!!";
+	return false;
+	}
+	if(isNaN(number))
+		{
+		document.getElementById("numError").innerHTML="Enter number only!!";
+		return false;
+		}
+	if(number.length!=10)
+		{
+		document.getElementById("numError").innerHTML="enter 10 digit number";
+		return false;
+		}
+	if(email=="")
+	{
+	document.getElementById("eError").innerHTML="Enter email!!";
+	return false;
+	}
+	if(pass=="")
+	{
+	document.getElementById("passError").innerHTML="Enter password!!";
+     return false;
+	}
+	if(pass.length<8)
+		{
+		document.getElementById("passError").innerHTML="password length should be 8 character";
+		return false;
+		}
+	if(!r1.test(pass) || !r2.test(pass)|| !r3.test(pass)|| !r4.test(pass))
+		{
+		document.getElementById("passError").innerHTML="password should contain 1 letter, digit and special character";
+		return false;
+		}
+	return true;
+	}
+</script>
+</head>
+<body>
+<br><br>
+
+<fieldset style="width:50px;margin-left:300px;">
+<legend>Registration Form:</legend>
+<form onsubmit="return validate()">
+<table border="1">
+<tr>
+<td><label>Id:</label></td>
+<td><input type="text" id="id"><br>
+<span id="idError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Name:</label></td>
+<td><input type="text" id="name"><br>
+<span id="nameError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Address:</label></td>
+<td><input type="text" id="address"><br>
+<span id="adError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Contact No:</label></td>
+<td><input type="text" id="number"><br>
+<span id="numError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Email id:</label></td>
+<td><input type="email" id="email"><br>
+<span id="eError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Password:</label></td>
+<td><input type="password" id="pass"><br>
+<span id="passError" class="error">*</span></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Submit"></td>
+<td><input type="reset" value="Clear"></td>
+</tr>
+
+</table>
+</form>
+
+
+
+
+</fieldset>
+</body>
+</html>

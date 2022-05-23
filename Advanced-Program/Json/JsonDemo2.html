@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+var slist = [
+	{
+		"studId" : 101,
+		"studName" : "Ananya"
+	},
+	{
+		"studId" : 102,
+		"studName" : "Tejas"		
+	},
+	{
+		"studId" : 103,
+		"studName" : "Neha"		
+	},
+]
+$(function(){
+	$("button").click(
+			function(){
+				if(slist!=null)
+					{
+					$("table").css("display","block");//display the table
+					$("tbody").html(""); //will empty table body
+					$.each(slist,function(index,obj){
+						
+						if(obj!=null)
+						{
+							
+							
+							$("tbody").append("<tr><td>"+obj.studId+"</td><td>"+obj.studName+"</td></tr>");
+						}
+					});
+					}
+					
+			});
+});
+</script>
+
+<br><br>
+<button>Show Data</button>
+<table border="1" style="width:110px; test-align:center; display:none;">
+	<tfoot>
+		<tr>
+			<td colspan="10">Footer row</td>
+		</tr>
+	</tfoot>
+	<thead>
+				<tr>
+				<td>Id</td>
+				<td>Name</td>
+				</tr>
+		</thead>
+	<tbody>
+		
+	</tbody>
+
+</table>
+</body>
+</html>

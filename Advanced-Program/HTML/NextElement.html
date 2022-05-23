@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Next Element</title>
+<style type="text/css">
+.error
+{
+color:red;
+
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var count=0;
+    var x=document.getElementsByClassName("valid");
+	
+	for(var i=0;i<x.length;i++)
+		{
+		if(x[i].value=="")
+			{
+			x[i].nextElementSibling.innerHTML="field cannot blank!!";
+			count++;
+			}
+		}
+	if(count>0)
+		{
+		return false;
+		}
+	else
+		{
+		return true;
+		}
+}
+function clearup(y)
+{
+	if(y.value!="")
+		y.nextElementSibling.innerHTML="";
+}
+</script>
+</head>
+<body>
+<br><br>
+<fieldset style="width:50px;margin-left:300px;">
+<legend>Registration Form:</legend>
+<form onsubmit="return validate()">
+<table border="1">
+<tr>
+<td><label>Id:</label></td>
+<td><input type="text" class="valid" onblur="clearup(this)">
+<span class="error" >*</span></td>
+</tr>
+
+<tr>
+<td><label>Name:</label></td>
+<td><input type="text"class="valid"  onblur="clearup(this)">
+<span class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Address:</label></td>
+<td><input type="text" class="valid" onblur="clearup(this)">
+<span class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Contact No:</label></td>
+<td><input type="text" class="valid" onblur="clearup(this)">
+<span class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Email id:</label></td>
+<td><input type="email" class="valid" onblur="clearup(this)">
+<span class="error">*</span></td>
+</tr>
+
+<tr>
+<td><label>Password:</label></td>
+<td><input type="password" class="valid" onblur="clearup(this)">
+<span class="error">*</span></td>
+</tr>
+
+
+<tr>
+<td><input type="submit" value="Submit"></td>
+<td><input type="reset" value="Clear"></td>
+</tr>
+
+</table>
+</form>
+</fieldset>
+</body>
+</html>

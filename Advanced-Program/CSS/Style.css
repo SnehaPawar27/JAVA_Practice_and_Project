@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+h1
+{
+	border-style:dotted;
+	color:red;
+	margin-left:80px;
+	
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		alert("value from TextBox: "+
+				$("#val").val());
+	});
+});
+</script>
+</head>
+<body>
+<br><br>
+<input type="text" value="Java" id="val"><br>
+<button >Click</button>
+</body>
+</html>

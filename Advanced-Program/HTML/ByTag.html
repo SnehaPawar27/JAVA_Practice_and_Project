@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Elements By Tag</title>
+<script type="text/javascript">
+function getTag()
+{
+	var tag=document.getElementsByTagName("li");
+	document.getElementById("demo").innerHTML=tag[0].innerHTML;
+	}
+
+</script>
+</head>
+<body>
+<br>
+<p>Unordered List:</p>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Servlet</li>
+</ul>
+<p>First value of list displayed at next line.</p>
+<button onclick="return getTag()">Click to </button>
+<p id="demo"></p>
+</body>
+</html>

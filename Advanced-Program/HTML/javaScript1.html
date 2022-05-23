@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Addition</title>
+
+</head>
+<body>
+<script type="text/javascript">
+<!-- Program for DOM Method -->
+function add()
+{
+var x=parseInt(document.getElementById("first").value);
+var y=parseInt(document.getElementById("second").value);
+
+document.getElementById("result").innerHTML=(x+y);
+}
+</script>
+First Number: <input type="text" id="first"><br>
+Second Number: <input type="text" id="second"><br>
+
+ Addition:  <b id="result"></b><br> 
+<button onclick="add()">Click</button>
+</body>
+</html>
+
+
